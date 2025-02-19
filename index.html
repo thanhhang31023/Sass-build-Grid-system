@@ -3,69 +3,74 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Apply Sass to Build a Grid System</title>
+        <title>Grid System with Sass</title>
         <link rel="stylesheet" href="./assets/css/main.css" />
         <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f8f9fa;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #343a40;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 0 15px;
+            }
             .item {
                 padding: 20px;
-                background: olivedrab;
-                font-size: 30px;
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+                color: white;
+                font-size: 20px;
                 font-weight: 600;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: #343a40;
+                color: white;
+                margin-top: 40px;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="row gx-0 gy-lg-3 gy-md-2 gy-1 row-cols-1 row-cols-md-2 row-cols-lg-4">
-                <div class="col">
-                    <div class="item">Item 1</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 2</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 3</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 4</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 5</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 6</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 7</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 8</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 9</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 10</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 11</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 12</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 13</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 14</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 15</div>
-                </div>
-                <div class="col">
-                    <div class="item">Item 16</div>
-                </div>
+        <header>My Custom Grid System</header>
+        <main class="container">
+            <div class="row g-1 g-md-2 g-lg-3 row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col"><div class="item">Item 1</div></div>
+                <div class="col"><div class="item">Item 2</div></div>
+                <div class="col"><div class="item">Item 3</div></div>
+                <div class="col"><div class="item">Item 4</div></div>
+                <div class="col"><div class="item">Item 5</div></div>
+                <div class="col"><div class="item">Item 6</div></div>
+                <div class="col"><div class="item">Item 7</div></div>
+                <div class="col"><div class="item">Item 8</div></div>
+                <div class="col"><div class="item">Item 9</div></div>
+                <div class="col"><div class="item">Item 10</div></div>
+                <div class="col"><div class="item">Item 11</div></div>
+                <div class="col"><div class="item">Item 12</div></div>
+                <div class="col"><div class="item">Item 13</div></div>
+                <div class="col"><div class="item">Item 14</div></div>
+                <div class="col"><div class="item">Item 15</div></div>
+                <div class="col"><div class="item">Item 16</div></div>
             </div>
-        </div>
+        </main>
+        <footer>© 2025 My Grid System. All rights reserved.</footer>
     </body>
 </html>
